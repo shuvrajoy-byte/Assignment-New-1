@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Design Section</title>
+    <style>
+        .card-section {
+            background-color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .top-header-text h1 {
+            font-size: 42px;
+            font-weight: bold;
+            color: #0d1b3e;
+            margin: 0 0 15px 0;
+        }
+
+        .top-header-text p {
+            font-size: 18px;
+            color: #777;
+            margin: 0 0 60px 0;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .single-card {
+            background-color: #ffffff;
+            padding: 50px 25px;
+            flex: 1;
+            border-radius: 12px 12px 0 0; 
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.05), 10px -10px 25px rgba(0, 0, 0, 0.03);
+            
+            border-bottom: none; 
+            box-sizing: border-box;
+        }
+        .icon-circle {
+            background-color: #ff5e5e; 
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px auto;
+        }
+
+        .icon-circle img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        .single-card h3 {
+            font-size: 22px;
+            color: #0d1b3e;
+            margin: 0 0 15px 0;
+        }
+        .single-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-section">
+        <div class="top-header-text">
+            <h1>Notes Don't Fail, Structure Does.</h1>
+            <p>You're not bad at learning. Your tools just weren't built for how knowledge actually works.</p>
+        </div>
+        <div class="cards-container">
+            <div class="single-card">
+                <div class="icon-circle">
+                    <img src="assets/CheckCircle.png" alt="Icon"> 
+                </div>
+                <h3>Scattered Notes</h3>
+                <p>Your ideas live in 10 different apps, none of them connected.</p>
+            </div>
+            <div class="single-card">
+                <div class="icon-circle">
+                    <img src="assets/CheckCircle.png" alt="Icon">
+                </div>
+                <h3>Bookmark Overload</h3>
+                <p>Hundreds of saved links you'll never revisit or remember.</p>
+            </div>
+            <div class="single-card">
+                <div class="icon-circle">
+                    <img src="assets/CheckCircle.png" alt="Icon">
+                </div>
+                <h3>No Idea Connections</h3>
+                <p>Insights stay isolated, never building into bigger understanding.</p>
+            </div>
+            <div class="single-card">
+                <div class="icon-circle">
+                    <img src="assets/CheckCircle.png" alt="Icon">
+                </div>
+                <h3>Forgetting What You Learned</h3>
+                <p>Knowledge fades because there's no system to retain it.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
