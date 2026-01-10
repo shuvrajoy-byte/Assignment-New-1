@@ -3,9 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes Design Section</title>
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        .card-section {
+        .navbar {
+            background-color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo img {
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #333333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-button {
+            background-color: #4c956c;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-button img {
+            width: 18px;
+            height: 18px;
+        }
+        .banner-area {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner-content {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .badge-box {
+            background-color: white;
+            color: #4c956c;
+            padding: 6px 18px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background-color: #4c956c;
+            border-radius: 50%;
+        }
+
+        .banner-title {
+            font-size: 75px;
+            margin: 0;
+        }
+
+        .banner-subtitle {
+            font-size: 55px;
+            color: #4c956c;
+            margin: 0 0 15px 0;
+        }
+
+        .banner-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #dddddd;
+            margin: 0 0 25px 0;
+        }
+
+        .banner-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-green {
+            background-color: #529471;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-green img {
+            width: 16px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #ffffff;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-outline i {
+            font-size: 20px;
+        }
+        .second-section {
             background-color: #ffffff;
             padding: 80px 20px;
             text-align: center;
@@ -29,15 +173,14 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .single-card {
             background-color: #ffffff;
             padding: 50px 25px;
             flex: 1;
-            border-radius: 12px 12px 0 0; 
+            border-radius: 12px 12px 0 0;
             box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.05), 10px -10px 25px rgba(0, 0, 0, 0.03);
             
-            border-bottom: none; 
+            border-bottom: none;
             box-sizing: border-box;
         }
         .icon-circle {
@@ -50,7 +193,6 @@
             align-items: center;
             margin: 0 auto 25px auto;
         }
-
         .icon-circle img {
             width: 32px;
             height: 32px;
@@ -67,10 +209,242 @@
             line-height: 1.6;
             margin: 0;
         }
+ 
+        .third-section {
+            padding: 100px 20px; 
+        }
+
+        .solution-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex; 
+            align-items: center; 
+            gap: 60px;
+        }
+
+        .left-image-box {
+            flex: 1; 
+        }
+
+        .left-image-box img {
+            width: 100%;
+            max-width: 500px; 
+            display: block;
+        }
+
+        .right-content-box {
+            flex: 1; 
+        }
+
+        .green-text {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .main-title {
+            font-size: 40px;
+            color: #0d1b3e;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .description-para {
+            color: #666; 
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            gap: 15px;  
+        }
+
+        .check-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .feature-item span {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+        .fourth-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-box {
+            background-color: #f9f7f2;
+            padding: 80px 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .heading-text {
+            font-size: 42px;
+            color: #0d1b3e;
+            margin-bottom: 20px;
+        }
+
+        .detail-text {
+            font-size: 18px;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .green-btn {
+            background-color: #529471;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .icon-img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .small-text {
+            font-size: 15px;
+            color: #888;
+        }
+
+        .footer-area {
+            background-color: #001529;
+            padding: 60px 20px;
+        }
+
+        .footer-main {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-top-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-img {
+            width: 130px;
+        }
+
+        .footer-social-side {
+            text-align: right;
+        }
+
+        .social-text {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .icon-list {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .icon-list a {
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .icon-list i {
+            color: #001529;
+            font-size: 14px;
+        }
+
+        .footer-border-line {
+            height: 1px;
+            background-color: #33475b;
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom-box {
+            text-align: center;
+        }
+
+        .copy-text {
+            color: #cccccc;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-    <div class="card-section">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo-navbar.png" alt="">
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item">Features</a>
+                <a href="#" class="nav-item">How It Works</a>
+                <a href="#" class="nav-item">Why It's Different</a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-button">
+                    Get Early Access
+                    <img src="assets/ArrowRight.png" alt="">
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="banner-area">
+        <div class="banner-content">
+            
+            <div class="badge-box">
+                <span class="dot"></span>
+                Early Access Now Open
+            </div>
+
+            <h1 class="banner-title">Structured Thinking,</h1>
+            <h2 class="banner-subtitle">Not Just Note-Taking.</h2>
+
+            <p class="banner-text">
+                A private space to store notes, links, and learning summaries — designed to <br>
+                help you think clearly, connect ideas, and turn learning into long-term knowledge.
+            </p>
+
+            <div class="banner-buttons">
+                <button class="btn-green">
+                    Start Building Your Vault 
+                    <img src="assets/ArrowRight.png" alt="">
+                </button>
+                <button class="btn-outline">
+                    <i class="fa-regular fa-circle-play"></i>
+                    See How It Works
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
         <div class="top-header-text">
             <h1>Notes Don't Fail, Structure Does.</h1>
             <p>You're not bad at learning. Your tools just weren't built for how knowledge actually works.</p>
@@ -78,34 +452,107 @@
         <div class="cards-container">
             <div class="single-card">
                 <div class="icon-circle">
-                    <img src="assets/CheckCircle.png" alt="Icon"> 
+                    <img src="assets/Vector.png" alt="">
                 </div>
                 <h3>Scattered Notes</h3>
                 <p>Your ideas live in 10 different apps, none of them connected.</p>
             </div>
+
             <div class="single-card">
                 <div class="icon-circle">
-                    <img src="assets/CheckCircle.png" alt="Icon">
+                    <img src="assets/Bookmarks.png" alt="">
                 </div>
                 <h3>Bookmark Overload</h3>
                 <p>Hundreds of saved links you'll never revisit or remember.</p>
             </div>
             <div class="single-card">
                 <div class="icon-circle">
-                    <img src="assets/CheckCircle.png" alt="Icon">
+                    <img src="assets/Brain.png" alt="">
                 </div>
                 <h3>No Idea Connections</h3>
                 <p>Insights stay isolated, never building into bigger understanding.</p>
             </div>
             <div class="single-card">
                 <div class="icon-circle">
-                    <img src="assets/CheckCircle.png" alt="Icon">
+                    <img src="assets/Info.png" alt="">
                 </div>
                 <h3>Forgetting What You Learned</h3>
                 <p>Knowledge fades because there's no system to retain it.</p>
             </div>
-
         </div>
     </div>
+    <div class="third-section">
+        <div class="solution-wrapper">>
+            <div class="left-image-box">
+                <img src="assets/knowledge.png" alt="">
+            </div>
+            <div class="right-content-box">
+                <p class="green-text">THE SOLUTION</p>
+                <h2 class="main-title">Your Second Brain, <br> Structured By Design.</h2>
+                <p class="description-para">
+                    Personal Knowledge Vault isn't another note-taking app. It's a thinking environment where every note, link, and summary becomes part of an interconnected web of understanding.
+                </p>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <img src="assets/CheckCircle.png" alt="icon" class="check-icon">
+                        <span>Capture ideas with structure built-in from day one</span>
+                    </div>
+
+                    <div class="feature-item">
+                        <img src="assets/CheckCircle.png" alt="icon" class="check-icon">
+                        <span>Connect related concepts automatically as you write</span>
+                    </div>
+
+                    <div class="feature-item">
+                        <img src="assets/CheckCircle.png" alt="icon" class="check-icon">
+                        <span>Build lasting knowledge through reflection prompts</span>
+                    </div>
+
+                    <div class="feature-item">
+                        <img src="assets/CheckCircle.png" alt="icon" class="check-icon">
+                        <span>Find anything instantly with semantic search</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fourth-section">
+        <div class="info-box">
+            <h2 class="heading-text">Ready To Think More Clearly?</h2>
+            <p class="detail-text">
+                Join thousands of learners who are building their personal knowledge vaults. <br>
+                Start free, no credit card required.
+            </p>
+            <button class="green-btn">
+                Get Early Access 
+                <img src="assets/ArrowRight.png" alt="" class="icon-img">
+            </button>
+            <p class="small-text">
+                Free during early access &bull; No credit card needed
+            </p>
+        </div>
+    </div>
+    <footer class="footer-area">
+        <div class="footer-main">
+            <div class="footer-top-box">
+                <div class="footer-logo-side">
+                    <img src="assets/logo-footer.png" alt="" class="footer-logo-img">
+                </div>
+                <div class="footer-social-side">
+                    <p class="social-text">Social Links</p>
+                    <div class="icon-list">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-border-line"></div>
+            <div class="footer-bottom-box">
+                <p class="copy-text">© 2026 Personal Knowledge Vault. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
 </body>
 </html>
